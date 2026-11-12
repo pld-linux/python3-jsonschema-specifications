@@ -7,13 +7,13 @@
 Summary:	The JSON Schema meta-schemas and vocabularies, exposed as a Registry
 Summary(pl.UTF-8):	Metaschematy i słowniki JSON Schema wystawione jako rejestr
 Name:		python3-%{module}
-Version:	2025.4.1
+Version:	2025.9.1
 Release:	1
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/jsonschema-specifications/
 Source0:	https://files.pythonhosted.org/packages/source/j/jsonschema-specifications/jsonschema_specifications-%{version}.tar.gz
-# Source0-md5:	d3919602b067993ba584fb4fe1662b9d
+# Source0-md5:	ef8e5a762c7ef39dcfb775c81336a690
 URL:		https://pypi.org/project/jsonschema-specifications/
 BuildRequires:	python3-build
 BuildRequires:	python3-hatch-vcs
@@ -66,7 +66,7 @@ Dokumentacja API modułu Pythona %{module}.
 %build
 %py3_build_pyproject
 
-%if %{with tests} || %{with docs}
+%if %{with tests} || %{with doc}
 %{__python3} -m zipfile -e build-3/*.whl build-3-ext
 %endif
 
